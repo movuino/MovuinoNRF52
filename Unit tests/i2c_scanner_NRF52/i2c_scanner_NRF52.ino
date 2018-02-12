@@ -11,7 +11,7 @@ void setup()
   Wire.begin();
   Serial.begin(115200);
   Serial.println("\nI2C Scanner");
-  pinMode(RED_LED,OUTPUT);
+//  pinMode(RED_LED,OUTPUT);
   }
 
 void loop()
@@ -20,7 +20,7 @@ void loop()
   int nDevices;
   Serial.println("Scanning...");
   nDevices = 0;
-  digitalWrite(RED_LED,LOW);
+ // digitalWrite(RED_LED,LOW);
   for(address = 1; address < 127; address++ )
   {
    // Serial.print(address,HEX);
@@ -31,7 +31,7 @@ void loop()
     Wire.write("0");
     error = Wire.endTransmission(); //if it doesnot work try Wire.endTransmission(true); 
    // Serial.print(" ");
-   // Serial.println(error);
+    Serial.println(error);
     if (error == 0 || error == 3 )
     {
       Serial.print("I2C device found at address 0x");
@@ -61,6 +61,6 @@ void loop()
   {
     //Serial.println("done\n");
 }
-digitalWrite(RED_LED,HIGH);
+//digitalWrite(RED_LED,HIGH);
 delay(1000);           // wait 5 seconds for next scan
 }
