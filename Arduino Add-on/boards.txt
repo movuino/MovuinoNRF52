@@ -1,0 +1,163 @@
+# Copyright (c) 2014-2015 Arduino LLC.  All right reserved.
+# Copyright (c) 2016 Sandeep Mistry All right reserved.
+# Copyright (c) 2017 Adafruit Industries.  All right reserved.
+#
+# This library is free software; you can redistribute it and/or
+# modify it under the terms of the GNU Lesser General Public
+# License as published by the Free Software Foundation; either
+# version 2.1 of the License, or (at your option) any later version.
+#
+# This library is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+# See the GNU Lesser General Public License for more details.
+#
+# You should have received a copy of the GNU Lesser General Public
+# License along with this library; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+
+menu.softdevice=Bootloader
+menu.debug=Debug Mode
+
+#**********************************************
+# Feather nrf52 Board
+#**********************************************
+feather52.name=Adafruit Bluefruit nRF52 Feather
+feather52.bootloader.tool=bootburn
+
+# Upload
+feather52.upload.tool=nrfutil
+feather52.upload.protocol=nrfutil
+
+# Build
+feather52.build.mcu=cortex-m4
+feather52.build.f_cpu=64000000
+feather52.build.board=NRF52_FEATHER
+feather52.build.core=nRF5
+feather52.build.variant=feather52
+
+# SofDevice Menu
+# Ram & ROM size varies depending on S132 (check linker script)
+feather52.menu.softdevice.s132v201=0.5.0 dual, S132 2.0.1
+feather52.menu.softdevice.s132v201.build.sd_flags=-DS132 -DSD_VER=201
+feather52.menu.softdevice.s132v201.build.sd_name=s132
+feather52.menu.softdevice.s132v201.build.sd_version=2.0.1
+feather52.menu.softdevice.s132v201.build.sd_fwid=0x0088
+feather52.menu.softdevice.s132v201.build.bootfile=0.5.0/dual/feather52_bootloader_v050_s132_v201
+feather52.menu.softdevice.s132v201.upload.maximum_size=165888
+feather52.menu.softdevice.s132v201.upload.maximum_data_size=51072
+
+feather52.menu.softdevice.s132v510=5.1.0 dual, S132 5.1.0
+feather52.menu.softdevice.s132v510.build.sd_flags=-DS132 -DSD_VER=510
+feather52.menu.softdevice.s132v510.build.sd_name=s132
+feather52.menu.softdevice.s132v510.build.sd_version=5.1.0
+feather52.menu.softdevice.s132v510.build.sd_fwid=0x00A5
+feather52.menu.softdevice.s132v510.build.bootfile={build.sd_version}/dual/feather52_bootloader_5.1.0_s132_dual
+feather52.menu.softdevice.s132v510.upload.maximum_size=151552
+feather52.menu.softdevice.s132v510.upload.maximum_data_size=51072
+
+# Debug Menu
+feather52.menu.debug.l0=Level 0 (Release)
+feather52.menu.debug.l0.build.debug_flags=-DCFG_DEBUG=0 -Os
+feather52.menu.debug.l1=Level 1 (Error Message)
+feather52.menu.debug.l1.build.debug_flags=-DCFG_DEBUG=1 -Os
+feather52.menu.debug.l2=Level 2 (Full Debug)
+feather52.menu.debug.l2.build.debug_flags=-DCFG_DEBUG=2 -Os
+feather52.menu.debug.l3=Level 3 (Segger SystemView)
+feather52.menu.debug.l3.build.debug_flags=-DCFG_DEBUG=3 -Os
+
+#**********************************************
+# Movuino nrf52 Board 
+#**********************************************
+movuino52.name=Movuino nrf52 Board
+movuino52.bootloader.tool=bootburn
+
+# Upload
+movuino52.upload.tool=nrfutil
+movuino52.upload.protocol=nrfutil
+
+# Build
+movuino52.build.mcu=cortex-m4
+movuino52.build.f_cpu=64000000
+movuino52.build.board=NRF52_FEATHER
+movuino52.build.core=nRF5
+movuino52.build.variant=movuino52
+
+# SofDevice Menu
+# Ram & ROM size varies depending on S132 (check linker script)
+movuino52.menu.softdevice.s132v201=0.5.0 dual, S132 2.0.1
+movuino52.menu.softdevice.s132v201.build.sd_flags=-DS132 -DSD_VER=201
+movuino52.menu.softdevice.s132v201.build.sd_name=s132
+movuino52.menu.softdevice.s132v201.build.sd_version=2.0.1
+movuino52.menu.softdevice.s132v201.build.sd_fwid=0x0088
+movuino52.menu.softdevice.s132v201.build.bootfile=0.5.0/dual/feather52_bootloader_v050_s132_v201
+movuino52.menu.softdevice.s132v201.upload.maximum_size=165888
+movuino52.menu.softdevice.s132v201.upload.maximum_data_size=51072
+
+movuino52.menu.softdevice.s132v510=5.1.0 dual, S132 5.1.0
+movuino52.menu.softdevice.s132v510.build.sd_flags=-DS132 -DSD_VER=510
+movuino52.menu.softdevice.s132v510.build.sd_name=s132
+movuino52.menu.softdevice.s132v510.build.sd_version=5.1.0
+movuino52.menu.softdevice.s132v510.build.sd_fwid=0x00A5
+movuino52.menu.softdevice.s132v510.build.bootfile={build.sd_version}/dual/feather52_bootloader_5.1.0_s132_dual
+movuino52.menu.softdevice.s132v510.upload.maximum_size=151552
+movuino52.menu.softdevice.s132v510.upload.maximum_data_size=51072
+
+# Debug Menu
+movuino52.menu.debug.l0=Level 0 (Release)
+movuino52.menu.debug.l0.build.debug_flags=-DCFG_DEBUG=0 -Os
+movuino52.menu.debug.l1=Level 1 (Error Message)
+movuino52.menu.debug.l1.build.debug_flags=-DCFG_DEBUG=1 -Os
+movuino52.menu.debug.l2=Level 2 (Full Debug)
+movuino52.menu.debug.l2.build.debug_flags=-DCFG_DEBUG=2 -Os
+movuino52.menu.debug.l3=Level 3 (Segger SystemView)
+movuino52.menu.debug.l3.build.debug_flags=-DCFG_DEBUG=3 -Os
+
+
+#**********************************************
+# Movuino nrf52 nano Board 
+#**********************************************
+movuino52nano.name=Movuino nrf52 nano Board
+movuino52nano.bootloader.tool=bootburn
+
+# Upload
+movuino52nano.upload.tool=nrfutil
+movuino52nano.upload.protocol=nrfutil
+
+# Build
+movuino52nano.build.mcu=cortex-m4
+movuino52nano.build.f_cpu=64000000
+movuino52nano.build.board=NRF52_FEATHER
+movuino52nano.build.core=nRF5
+movuino52nano.build.variant=movuino52nano
+
+# SofDevice Menu
+# Ram & ROM size varies depending on S132 (check linker script)
+movuino52nano.menu.softdevice.s132v201=0.5.0 dual, S132 2.0.1
+movuino52nano.menu.softdevice.s132v201.build.sd_flags=-DS132 -DSD_VER=201
+movuino52nano.menu.softdevice.s132v201.build.sd_name=s132
+movuino52nano.menu.softdevice.s132v201.build.sd_version=2.0.1
+movuino52nano.menu.softdevice.s132v201.build.sd_fwid=0x0088
+movuino52nano.menu.softdevice.s132v201.build.bootfile=0.5.0/dual/feather52_bootloader_v050_s132_v201
+movuino52nano.menu.softdevice.s132v201.upload.maximum_size=165888
+movuino52nano.menu.softdevice.s132v201.upload.maximum_data_size=51072
+
+movuino52nano.menu.softdevice.s132v510=5.1.0 dual, S132 5.1.0
+movuino52nano.menu.softdevice.s132v510.build.sd_flags=-DS132 -DSD_VER=510
+movuino52nano.menu.softdevice.s132v510.build.sd_name=s132
+movuino52nano.menu.softdevice.s132v510.build.sd_version=5.1.0
+movuino52nano.menu.softdevice.s132v510.build.sd_fwid=0x00A5
+movuino52nano.menu.softdevice.s132v510.build.bootfile={build.sd_version}/dual/feather52_bootloader_5.1.0_s132_dual
+movuino52nano.menu.softdevice.s132v510.upload.maximum_size=151552
+movuino52nano.menu.softdevice.s132v510.upload.maximum_data_size=51072
+
+# Debug Menu
+movuino52nano.menu.debug.l0=Level 0 (Release)
+movuino52nano.menu.debug.l0.build.debug_flags=-DCFG_DEBUG=0 -Os
+movuino52nano.menu.debug.l1=Level 1 (Error Message)
+movuino52nano.menu.debug.l1.build.debug_flags=-DCFG_DEBUG=1 -Os
+movuino52nano.menu.debug.l2=Level 2 (Full Debug)
+movuino52nano.menu.debug.l2.build.debug_flags=-DCFG_DEBUG=2 -Os
+movuino52nano.menu.debug.l3=Level 3 (Segger SystemView)
+movuino52nano.menu.debug.l3.build.debug_flags=-DCFG_DEBUG=3 -Os
+

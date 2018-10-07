@@ -1,0 +1,2 @@
+BAsed on adafruit NRF52 definitions  https://github.com/adafruit/Adafruit_nRF52_Arduino
+install first adafruit nrf52 definitions , then replace boards.txt by this one and add the 2 folders in the variants folder
