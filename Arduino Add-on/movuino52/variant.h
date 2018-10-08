@@ -117,8 +117,8 @@ static const uint8_t D7  = PIN_D7 ;
 #define SPI_INTERFACES_COUNT 1
 
 #define PIN_SPI_MISO         (23)
-#define PIN_SPI_MOSI         (13)
-#define PIN_SPI_SCK          (16)
+#define PIN_SPI_MOSI         (16)
+#define PIN_SPI_SCK          (19)
 
 static const uint8_t SS   = 7 ; //old 18
 static const uint8_t MOSI = PIN_SPI_MOSI ;
